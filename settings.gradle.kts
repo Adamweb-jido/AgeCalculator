@@ -19,5 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Age Calculator"
+rootProject.name = "Agetric"
 include(":app")
