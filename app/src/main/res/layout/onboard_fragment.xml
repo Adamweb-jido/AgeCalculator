@@ -57,6 +57,15 @@
         android:textStyle="bold" />
 
     <com.google.android.material.button.MaterialButton
+        android:id="@+id/nextBtn"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        app:cornerRadius="100dp"
+        android:text=""
+        android:textSize="50sp"
+        android:textAlignment="center"/>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/ageMeBtn"
         android:layout_width="80dp"
         android:layout_height="80dp"
         app:cornerRadius="100dp"

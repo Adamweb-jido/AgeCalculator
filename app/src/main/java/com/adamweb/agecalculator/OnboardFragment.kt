@@ -22,7 +22,12 @@ class OnboardFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         val args = requireArguments()
+        binding.onboardImg.setImageResource(args.getInt("images"))
+        binding.onboardTittle.setText(args.getString("Title"))
+        binding.onboardDesc.setText(args.getString("Descriptions"))
 
+        val isLast = args.getBoolean("isLast", false)
+        binding.ageMeBtn.visibility = if (isLast) View.VISIBLE else View.GONE
     }
 
 }
