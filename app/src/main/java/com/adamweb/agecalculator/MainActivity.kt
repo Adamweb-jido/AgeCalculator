@@ -14,9 +14,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val fragmentList = listOf(
-                firstOnboardFragment(),
-                SecondOnboardFragment(),
-                ThirdOnboardFragment()
+                OnboardFragment()
         )
         val adapter = OnboardingAdapter(this, fragmentList)
             binding.onboardViewPager.adapter = adapter
