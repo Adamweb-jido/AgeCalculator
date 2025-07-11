@@ -2,7 +2,65 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/white"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="15dp"
+    android:gravity="center">
 
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:orientation="horizontal"
+         android:gravity="end"
+         android:padding="10dp">
+          <com.google.android.material.button.MaterialButton
+              android:id="@+id/skipBtn"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="skip"
+              android:textColor="@color/white"
+              android:backgroundTint="@android:color/transparent"
+              />
+     </LinearLayout>
+     <ImageView
+         android:id="@+id/onboardImg"
+         android:contentDescription="onboarding image"
+         android:layout_width="280dp"
+         android:layout_height="280dp"
+         />
+
+    <TextView
+        android:id="@+id/onboardTittle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="Welcome to Agetric"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textAlignment="center"
+        android:letterSpacing="0.1"
+        android:textStyle="bold"
+        android:fontFamily="@font/archivo"/>
+
+    <TextView
+        android:id="@+id/onboardDesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:alpha="0.6"
+        android:fontFamily="@font/archivo"
+        android:padding="10dp"
+        android:text="Welcome to Agetric"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        app:cornerRadius="100dp"
+        android:text=""
+        android:textSize="50sp"
+        android:textAlignment="center"/>
 </LinearLayout>
