@@ -49,6 +49,20 @@ class OnboardFragment : Fragment() {
         }
     }
 
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
 
+    companion object {
+        fun newInstance(imageRes: Int, title: String, desc: String, isLast: Boolean) = OnboardFragment().apply {
+            arguments = Bundle().apply {
+                putInt("image", imageRes)
+                putString("title", title)
+                putString("desc", desc)
+                putBoolean("isLast", isLast)
+            }
+        }
+    }
 
 }
