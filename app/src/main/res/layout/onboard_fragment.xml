@@ -34,7 +34,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:orientation="vertical"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="10dp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
         app:layout_constraintEnd_toEndOf="@+id/linearLayout"
         app:layout_constraintStart_toStartOf="@+id/linearLayout"
@@ -42,9 +42,10 @@
 
         <ImageView
             android:id="@+id/onboardImg"
-            android:layout_width="290dp"
-            android:layout_height="290dp"
+            android:layout_width="350dp"
+            android:layout_height="350dp"
             android:layout_marginTop="20dp"
+            android:background="@drawable/image_bg"
             android:contentDescription="onboarding image" />
 
 
@@ -52,10 +53,9 @@
             android:id="@+id/onboardTittle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:letterSpacing="0.1"
-            android:layout_marginTop="30dp"
+            android:letterSpacing="0.0"
             android:padding="10dp"
-            android:text="Welcome to Agetric"
+            android:text="Welcom8e to Agetric"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="30sp"
@@ -65,13 +65,15 @@
             android:id="@+id/onboardDesc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:alpha="0.6"
+            android:alpha="0.55"
             android:padding="10dp"
+            android:layout_marginTop="10dp"
             android:text="Welcome to Agetric"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="20sp"
-            android:textStyle="bold" />
+            android:letterSpacing="0.08"
+            android:textStyle="normal" />
 
     </LinearLayout>
 

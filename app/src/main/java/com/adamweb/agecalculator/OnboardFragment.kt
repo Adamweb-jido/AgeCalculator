@@ -30,6 +30,18 @@ class OnboardFragment : Fragment() {
 
         val isLast = args.getBoolean("isLast", false)
 
+        if (isLast) {
+            binding.skipBtn.isEnabled = false
+            binding.skipBtn.alpha = 0.3f
+        } else {
+            binding.skipBtn.isEnabled = true
+            binding.skipBtn.alpha = 1f
+        }
+
+        binding.skipBtn.setOnClickListener {
+            Toast.makeText(context, "Welcome to Agetric", Toast.LENGTH_SHORT).show()
+        }
+
         binding.nextBtn.apply {
             text = if (isLast) "Jump In" else "Next"
             setOnClickListener {
@@ -44,9 +56,7 @@ class OnboardFragment : Fragment() {
             }
         }
 
-        binding.skipBtn.setOnClickListener {
-            Toast.makeText(context, "Welcome to Agetric", Toast.LENGTH_SHORT).show()
-        }
+
     }
 
     override fun onDestroyView() {
