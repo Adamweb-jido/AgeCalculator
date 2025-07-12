@@ -25,8 +25,8 @@ class OnboardFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         val args = requireArguments()
         binding.onboardImg.setImageResource(args.getInt("images"))
-        binding.onboardTittle.setText(args.getString("Title"))
-        binding.onboardDesc.setText(args.getString("Descriptions"))
+        binding.onboardTittle.setText(args.getString("title"))
+        binding.onboardDesc.setText(args.getString("desc"))
 
         val isLast = args.getBoolean("isLast", false)
 
@@ -57,7 +57,7 @@ class OnboardFragment : Fragment() {
     companion object {
         fun newInstance(imageRes: Int, title: String, desc: String, isLast: Boolean) = OnboardFragment().apply {
             arguments = Bundle().apply {
-                putInt("image", imageRes)
+                putInt("images", imageRes)
                 putString("title", title)
                 putString("desc", desc)
                 putBoolean("isLast", isLast)

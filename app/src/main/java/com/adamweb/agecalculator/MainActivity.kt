@@ -20,9 +20,9 @@ class MainActivity : AppCompatActivity() {
 
     private fun viewPagerHandler() {
         val fragmentList = listOf(
-            OnboardFragment.newInstance(R.drawable.onboardingimg1, "First Slide", "This is the First Slide", false),
-            OnboardFragment.newInstance(R.drawable.onboardingimg2, "Second Slide", "This is the Second Slide", false),
-            OnboardFragment.newInstance(R.drawable.onboardingimg1, "First Slide", "This is Third Slide", true)
+            OnboardFragment.newInstance(R.drawable.onboardingimg3, "Your Life In Numbers", "Discover your exact Age in Years, Months and Days instantly - Agetric gives you more than just a Number", false),
+            OnboardFragment.newInstance(R.drawable.onboardingimg2, "Explore More Than Just Years", "Find your Birthday Day, next Birthday countdown, and even your Age in seconds. Time is powerful - now it's Personal", false),
+            OnboardFragment.newInstance(R.drawable.onboardingimg1, "Style Meets Accuracy", "Enjoy playful interface and precise Age results. Let Agetric make your moments count.", true)
         )
 
         adapter = OnboardingAdapter(this, fragmentList)
