@@ -30,7 +30,5 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    fun goToLastPage(){
-        binding.onboardViewPager.currentItem = adapter.itemCount -1
-    }
+
 }

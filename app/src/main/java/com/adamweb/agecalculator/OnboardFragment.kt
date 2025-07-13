@@ -4,7 +4,11 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.Window
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.WindowCompat
+import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.ViewPager2
 import com.adamweb.agecalculator.databinding.OnboardFragmentBinding
@@ -25,8 +29,13 @@ class OnboardFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         val args = requireArguments()
         binding.onboardImg.setImageResource(args.getInt("images"))
-        binding.onboardTittle.setText(args.getString("title"))
-        binding.onboardDesc.setText(args.getString("desc"))
+        binding.onboardTittle.text = args.getString("title")
+        binding.onboardDesc.text = args.getString("desc")
+
+        (activity as? AppCompatActivity)?.supportActionBar?.hide()
+        val window = requireActivity().window
+        val controller = WindowCompat.getInsetsController(window, view)
+        controller.show(WindowInsetsCompat.Type.systemBars())
 
         val isLast = args.getBoolean("isLast", false)
 
