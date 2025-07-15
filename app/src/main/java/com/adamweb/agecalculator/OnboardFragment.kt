@@ -4,10 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.Window
-import android.view.WindowInsetsController
 import android.widget.FrameLayout
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
@@ -55,6 +52,7 @@ class OnboardFragment : Fragment() {
         }
 
         binding.skipBtn.setOnClickListener {
+            activity?.findViewById<ViewPager2>(R.id.onboardViewPager)?.visibility = View.GONE
             parentFragmentManager.beginTransaction().replace(R.id.frameContainer, profilePage).commit()
             activity?.findViewById<FrameLayout>(R.id.frameContainer)?.visibility = View.VISIBLE
         }
@@ -63,6 +61,7 @@ class OnboardFragment : Fragment() {
             text = if (isLast) "Jump In" else "Next"
             setOnClickListener {
                 if (isLast){
+                    activity?.findViewById<ViewPager2>(R.id.onboardViewPager)?.visibility = View.GONE
                     parentFragmentManager.beginTransaction().replace(R.id.frameContainer, profilePage).commit()
                     activity?.findViewById<FrameLayout>(R.id.frameContainer)?.visibility = View.VISIBLE
                 } else {
