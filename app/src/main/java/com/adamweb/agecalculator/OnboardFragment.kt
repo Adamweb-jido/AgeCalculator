@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.Window
 import android.view.WindowInsetsController
+import android.widget.FrameLayout
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.WindowCompat
@@ -19,6 +20,7 @@ class OnboardFragment : Fragment() {
 
     private var _binding : OnboardFragmentBinding? = null
     private val binding get() = _binding!!
+    val profilePage = SetUpProfileFragment()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -53,14 +55,16 @@ class OnboardFragment : Fragment() {
         }
 
         binding.skipBtn.setOnClickListener {
-            Toast.makeText(context, "Welcome to Agetric", Toast.LENGTH_SHORT).show()
+            parentFragmentManager.beginTransaction().replace(R.id.frameContainer, profilePage).commit()
+            activity?.findViewById<FrameLayout>(R.id.frameContainer)?.visibility = View.VISIBLE
         }
 
         binding.nextBtn.apply {
             text = if (isLast) "Jump In" else "Next"
             setOnClickListener {
                 if (isLast){
-                    Toast.makeText(context, "Welcome to Agetric", Toast.LENGTH_SHORT).show()
+                    parentFragmentManager.beginTransaction().replace(R.id.frameContainer, profilePage).commit()
+                    activity?.findViewById<FrameLayout>(R.id.frameContainer)?.visibility = View.VISIBLE
                 } else {
                     val viewPager = activity?.findViewById<ViewPager2>(R.id.onboardViewPager)
                     viewPager?.let {
