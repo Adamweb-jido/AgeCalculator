@@ -83,7 +83,7 @@
            android:layout_height="60dp"
            android:layout_marginTop="30dp"
            android:backgroundTint="@color/faded_blue"
-           android:text="save & continue"
+           android:text="@string/save_continue"
            android:textColor="@color/white"
            android:textSize="20sp"
            android:letterSpacing="0.07"/>
