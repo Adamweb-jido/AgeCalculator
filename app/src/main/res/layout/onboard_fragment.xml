@@ -46,7 +46,7 @@
             android:layout_height="350dp"
             android:layout_marginTop="10dp"
             android:background="@drawable/image_bg"
-            android:contentDescription="onboarding image" />
+            android:contentDescription="@string/onboarding_image" />
 
 
         <TextView
@@ -55,7 +55,6 @@
             android:layout_height="wrap_content"
             android:letterSpacing="0.0"
             android:padding="10dp"
-            android:text="Welcom8e to Agetric"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="30sp"
@@ -67,7 +66,6 @@
             android:layout_height="wrap_content"
             android:alpha="0.55"
             android:padding="10dp"
-            android:text="Welcome to Agetric"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="15sp"
@@ -87,15 +85,16 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/nextBtn"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginBottom="10dp"
             android:padding="15dp"
-            android:text="Jump In"
+            android:backgroundTint="@color/faded_blue"
+            android:text="@string/app_name"
             android:textAlignment="center"
             android:textSize="20sp"
-            app:cornerRadius="15dp" />
+            app:cornerRadius="30dp" />
     </LinearLayout>
 
 
