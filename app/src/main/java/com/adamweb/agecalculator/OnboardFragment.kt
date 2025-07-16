@@ -5,10 +5,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.FrameLayout
-import androidx.appcompat.app.AppCompatActivity
+/*import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
-import androidx.core.view.WindowInsetsControllerCompat
+import androidx.core.view.WindowInsetsControllerCompat */
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.ViewPager2
 import com.adamweb.agecalculator.databinding.OnboardFragmentBinding
@@ -33,13 +33,13 @@ class OnboardFragment : Fragment() {
         binding.onboardTittle.text = args.getString("title")
         binding.onboardDesc.text = args.getString("desc")
 
-        (activity as? AppCompatActivity)?.supportActionBar?.hide()
+      /*  (activity as? AppCompatActivity)?.supportActionBar?.hide()
         val window = requireActivity().window
         WindowCompat.setDecorFitsSystemWindows(window, false)
         val controller = WindowInsetsControllerCompat(window, view)
         controller.hide(WindowInsetsCompat.Type.systemBars())
         controller.systemBarsBehavior = WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
-
+*/
 
         val isLast = args.getBoolean("isLast", false)
 
