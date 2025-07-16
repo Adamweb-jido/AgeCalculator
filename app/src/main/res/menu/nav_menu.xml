@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/nav_history"
+        app:cnb_iconColor="@color/faded_blue"
+        android:icon="@drawable/history_icon"
+        android:title="History" />
+    <item
+        android:id="@+id/nav_home"
+        app:cnb_iconColor="@color/faded_blue"
+        android:icon="@drawable/home_icon"
+        android:title="Home" />
+    <item
+        android:id="@+id/nav_profile"
+        app:cnb_iconColor="@color/faded_blue"
+        android:icon="@drawable/user_profile_icon"
+        android:title="Profile" />
+</menu>
