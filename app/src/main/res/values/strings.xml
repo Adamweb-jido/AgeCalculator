@@ -3,4 +3,9 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="save_continue"><![CDATA[save & continue]]></string>
+    <string name="profile_setup">Profile Setup</string>
+    <string name="enter_your_full_name">Enter your full name</string>
+    <string name="add_your_name_and_photo_to_make_agetric_truly_yours">Add your name and photo to make Agetric truly yours.</string>
+    <string name="personalize_your_agetric_experience">Personalize Your Agetric Experience</string>
+    <string name="tap_here_to_change_photo">tap here to change photo</string>
 </resources>
