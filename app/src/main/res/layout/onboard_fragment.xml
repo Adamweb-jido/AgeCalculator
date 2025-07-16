@@ -90,7 +90,6 @@
             android:layout_gravity="center"
             android:layout_marginBottom="10dp"
             android:padding="15dp"
-            android:backgroundTint="@color/faded_blue"
             android:text="@string/app_name"
             android:textAlignment="center"
             android:textSize="20sp"
