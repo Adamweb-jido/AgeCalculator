@@ -25,7 +25,7 @@ class SetUpProfileFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
        binding.continueBtn.setOnClickListener {
-           parentFragmentManager.beginTransaction().replace(R.id.fragmentContainer, mainMenu).commit()
+           parentFragmentManager.beginTransaction().replace(R.id.frameContainer, mainMenu).commit()
        }
     }
 

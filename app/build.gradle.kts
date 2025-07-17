@@ -51,6 +51,5 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
     implementation(libs.androidx.viewpager2)
     implementation(libs.circleimageview)
-    implementation(libs.meow.bottom.navigation)
 
 }
