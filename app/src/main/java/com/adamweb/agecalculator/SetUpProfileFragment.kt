@@ -13,6 +13,8 @@ class SetUpProfileFragment : Fragment() {
     private var _binding : FragmentSetUpProfileBinding? = null
     private val binding get() = _binding!!
 
+    private val mainMenu = MainMenuFragment()
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -22,7 +24,9 @@ class SetUpProfileFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-
+       binding.continueBtn.setOnClickListener {
+           parentFragmentManager.beginTransaction().replace(R.id.fragmentContainer, mainMenu).commit()
+       }
     }
 
 }
