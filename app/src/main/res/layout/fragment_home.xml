@@ -69,33 +69,22 @@
                 android:layout_height="150dp"
                 android:layout_marginBottom="16dp"
                 android:elevation="8dp"
-                app:cardBackgroundColor="@color/faded_yellow"
+                app:cardBackgroundColor="#ECE0CD"
                 app:cardCornerRadius="20dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:gravity="center"
                     android:orientation="vertical">
-                    <TextView
-                        android:id="@+id/quoteTitle"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:padding="10dp"
-                        android:textStyle="bold"
-                        android:letterSpacing="0.02"
-                        android:textAlignment="center"
-                        android:text="@string/enter_your_full_name"
-                        android:textSize="30sp"/>
 
-                    <TextView
-                        android:id="@+id/quoteText"
+                    <TextSwitcher
+                        android:id="@+id/textSlide"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textStyle="bold"
-                        android:letterSpacing="0.02"
-                        android:textAlignment="center"
-                        android:text="@string/enter_your_full_name"
-                        android:textSize="20sp"/>
+                        android:inAnimation="@anim/slide_in_right"
+                        android:outAnimation="@anim/slide_out_right"
+                        android:textAlignment="center"/>
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
@@ -103,14 +92,71 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="10dp"
-                android:background="@color/faded_blue">
+                android:padding="15dp"
+                android:background="@drawable/calculate_background">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Your Date Of Birth"
-                    android:textColor="@color/white"/>
+                    android:textColor="@color/white"
+                    android:layout_marginTop="10dp"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    style="@style/Widget.Material3.TextInputLayout.FilledBox"
+                    app:boxBackgroundColor="@color/white"
+                    app:endIconMode="custom"
+                    android:hint="Select your Birth Date"
+                    app:boxCornerRadiusBottomStart="15dp"
+                    app:boxCornerRadiusTopEnd="15dp"
+                    app:boxCornerRadiusBottomEnd="15dp"
+                    app:boxCornerRadiusTopStart="15dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:focusable="false"
+                        android:inputType="none"
+                        android:clickable="true"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Your Date Of Birth"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="20dp"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    style="@style/Widget.Material3.TextInputLayout.FilledBox"
+                    app:boxBackgroundColor="@color/white"
+                    app:endIconMode="custom"
+                    android:hint="Select your Birth Date"
+                    app:boxCornerRadiusBottomStart="15dp"
+                    app:boxCornerRadiusTopEnd="15dp"
+                    app:boxCornerRadiusBottomEnd="15dp"
+                    app:boxCornerRadiusTopStart="15dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:focusable="false"
+                        android:inputType="none"
+                        android:clickable="true"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="match_parent"
+                    android:layout_height="65dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Calculate"
+                    android:textSize="20sp"
+                    android:letterSpacing="0.1"
+                    app:cornerRadius="15dp"/>
             </LinearLayout>
         </LinearLayout>
 
