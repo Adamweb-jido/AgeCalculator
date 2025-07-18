@@ -30,8 +30,8 @@ class MainMenuFragment : Fragment() {
        setCurrentFragment(homeFragment)
         binding.bottomNavigationView.setOnItemSelectedListener {
             when(it.itemId){
-                R.id.nav_history -> setCurrentFragment(historyFragment)
                 R.id.nav_home -> setCurrentFragment(homeFragment)
+                R.id.nav_history -> setCurrentFragment(historyFragment)
                 R.id.nav_profile -> setCurrentFragment(profileFragment)
             }
             true

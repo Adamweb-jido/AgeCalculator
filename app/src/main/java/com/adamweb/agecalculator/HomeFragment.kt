@@ -36,7 +36,7 @@ class HomeFragment : Fragment() {
 
         textSlider.setFactory {
             TextView(requireContext()).apply {
-                textSize = 20f
+                textSize = 18f
                 setTextColor(ContextCompat.getColor(requireContext(), R.color.black))
                 typeface = Typeface.DEFAULT_BOLD
                 gravity = Gravity.CENTER
@@ -61,6 +61,6 @@ class HomeFragment : Fragment() {
     private fun nextSlideText() {
         textSlider.setText(messeges[messegeIndex])
         messegeIndex = (messegeIndex + 1) % messeges.size
-        Handler(Looper.getMainLooper()).postDelayed({nextSlideText()}, 4000)
+        Handler(Looper.getMainLooper()).postDelayed({nextSlideText()}, 5000)
     }
 }

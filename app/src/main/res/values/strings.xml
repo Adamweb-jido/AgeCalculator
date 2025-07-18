@@ -9,4 +9,6 @@
     <string name="personalize_your_agetric_experience">Personalize Your Agetric Experience</string>
     <string name="tap_here_to_change_photo">tap here to change photo</string>
     <string name="onboarding_image">onboarding image</string>
+    <string name="check_other">Check Other</string>
+    <string name="calculate_age">Calculate Age</string>
 </resources>
