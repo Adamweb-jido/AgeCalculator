@@ -7,5 +7,7 @@
     <color name="faded_yellow">#FF9800</color>
     <color name="bluwish">#7171F6</color>
     <color name="btnColor">#B877F6</color>
+    <color name="bd_timeline_color">#CDC56D</color>
+    <color name="next_bd_color">#7fffd4</color>
 </resources>
 
