@@ -180,6 +180,26 @@
                 android:background="@drawable/bd_timeline_bg"
                 android:orientation="horizontal">
 
+                <androidx.cardview.widget.CardView
+                    android:layout_width="75dp"
+                    android:layout_height="match_parent"
+                    app:cardCornerRadius="100dp"
+                    android:elevation="5dp">
+                    <ImageView
+                        android:contentDescription="@string/check_other"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/bd_timeline_icon"
+                        android:layout_margin="10dp"/>
+                </androidx.cardview.widget.CardView>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:text="My Birthday Timeline from Birth to Date"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -189,6 +209,28 @@
                 android:background="@drawable/next_bd_bg"
                 android:orientation="horizontal">
 
+                <androidx.cardview.widget.CardView
+                    android:layout_width="75dp"
+                    android:layout_height="match_parent"
+                    app:cardCornerRadius="100dp"
+                    android:padding="10dp"
+                    android:elevation="5dp">
+                    <ImageView
+                        android:contentDescription="@string/check_other"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/next_bd_icon"
+                        android:layout_margin="10dp"/>
+                </androidx.cardview.widget.CardView>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:text="How Many Days Until My Next Birthday?"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -198,6 +240,28 @@
                 android:background="@drawable/born_day_bg"
                 android:orientation="horizontal">
 
+                <androidx.cardview.widget.CardView
+                    android:layout_width="75dp"
+                    android:layout_height="match_parent"
+                    app:cardCornerRadius="100dp"
+                    android:padding="10dp"
+                    android:elevation="5dp">
+                    <ImageView
+                        android:contentDescription="@string/check_other"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/birth_date_icon"
+                        android:layout_margin="10dp"/>
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:text="What Day I Was Born?"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -207,6 +271,28 @@
                 android:background="@drawable/calculate_background"
                 android:orientation="horizontal">
 
+                <androidx.cardview.widget.CardView
+                    android:layout_width="75dp"
+                    android:layout_height="match_parent"
+                    app:cardCornerRadius="100dp"
+                    android:padding="10dp"
+                    android:elevation="5dp">
+                    <ImageView
+                        android:contentDescription="@string/check_other"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/old_am_i_icon"
+                        android:layout_margin="10dp"/>
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:text="How Old Am I Today?"/>
             </LinearLayout>
 
         </LinearLayout>
