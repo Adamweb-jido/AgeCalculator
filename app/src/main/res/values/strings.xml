@@ -11,4 +11,12 @@
     <string name="onboarding_image">onboarding image</string>
     <string name="check_other">Check Other</string>
     <string name="calculate_age">Calculate Age</string>
+    <string name="today_s_date">Today\'s Date</string>
+    <string name="select_your_birth_date">Select your Birth Date</string>
+    <string name="your_date_of_birth">Your Date Of Birth</string>
+    <string name="how_old_am_i_today">How Old Am I Today?</string>
+    <string name="my_birthday_timeline_from_birth_to_date">My Birthday Timeline from Birth to Date</string>
+    <string name="how_many_days_until_my_next_birthday">How Many Days Until My Next Birthday?</string>
+    <string name="what_day_i_was_born">What Day I Was Born?</string>
+    <string name="todo">TODO</string>
 </resources>

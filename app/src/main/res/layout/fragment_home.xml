@@ -20,6 +20,7 @@
             android:id="@+id/menuBtn"
             android:layout_width="50dp"
             android:layout_height="50dp"
+            android:contentDescription="@string/todo"
             android:src="@drawable/menu_icon"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -103,7 +104,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Your Date Of Birth"
+                    android:text="@string/your_date_of_birth"
                     android:textColor="@color/white"
                     android:layout_marginTop="10dp"/>
 
@@ -112,25 +113,25 @@
                     android:layout_height="wrap_content"
                     style="@style/Widget.Material3.TextInputLayout.FilledBox"
                     app:boxBackgroundColor="@color/white"
-                    app:endIconMode="custom"
-                    android:hint="Select your Birth Date"
                     app:boxCornerRadiusBottomStart="10dp"
                     app:boxCornerRadiusTopEnd="10dp"
                     app:boxCornerRadiusBottomEnd="10dp"
+                    app:endIconMode="custom"
                     app:boxCornerRadiusTopStart="10dp">
 
                     <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/dobPicker"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:focusable="false"
-                        android:inputType="none"
-                        android:clickable="true"/>
+                        android:hint="@string/your_date_of_birth"
+                        android:inputType="none" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Your Date Of Birth"
+                    android:text="@string/today_s_date"
                     android:textColor="@color/white"
                     android:layout_marginTop="20dp"/>
 
@@ -139,19 +140,19 @@
                     android:layout_height="wrap_content"
                     style="@style/Widget.Material3.TextInputLayout.FilledBox"
                     app:boxBackgroundColor="@color/white"
-                    app:endIconMode="custom"
-                    android:hint="Select your Birth Date"
                     app:boxCornerRadiusBottomStart="10dp"
                     app:boxCornerRadiusTopEnd="10dp"
                     app:boxCornerRadiusBottomEnd="10dp"
                     app:boxCornerRadiusTopStart="10dp">
 
                     <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/currentDate"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:hint="@string/today_s_date"
                         android:focusable="false"
                         android:inputType="none"
-                        android:clickable="true"/>
+                        android:clickable="false"/>
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.button.MaterialButton
@@ -199,7 +200,7 @@
                     android:gravity="center"
                     android:textSize="20sp"
                     android:textStyle="bold"
-                    android:text="My Birthday Timeline from Birth to Date"/>
+                    android:text="@string/my_birthday_timeline_from_birth_to_date"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -230,7 +231,7 @@
                     android:padding="10dp"
                     android:textSize="20sp"
                     android:textStyle="bold"
-                    android:text="How Many Days Until My Next Birthday?"/>
+                    android:text="@string/how_many_days_until_my_next_birthday"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -261,7 +262,7 @@
                     android:gravity="center"
                     android:textSize="20sp"
                     android:textStyle="bold"
-                    android:text="What Day I Was Born?"/>
+                    android:text="@string/what_day_i_was_born"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -292,7 +293,7 @@
                     android:gravity="center"
                     android:textSize="20sp"
                     android:textStyle="bold"
-                    android:text="How Old Am I Today?"/>
+                    android:text="@string/how_old_am_i_today"/>
             </LinearLayout>
 
         </LinearLayout>

@@ -13,6 +13,10 @@ import android.widget.TextSwitcher
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import com.adamweb.agecalculator.databinding.FragmentHomeBinding
+import com.google.android.material.datepicker.MaterialDatePicker
+import java.text.SimpleDateFormat
+import java.util.Date
+import java.util.Locale
 
 class HomeFragment : Fragment() {
 
@@ -33,7 +37,19 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
          textSlider = binding.textSlide
+        val dobEdit = binding.dobPicker
+        val currentD = binding.currentDate
 
+        dobEdit.setOnClickListener {
+            val datePicker = MaterialDatePicker.Builder.datePicker()
+                .setSelection(MaterialDatePicker.todayInUtcMilliseconds()).build()
+            datePicker.show(parentFragmentManager, "dobPicker")
+            datePicker.addOnPositiveButtonClickListener { selection ->
+                val date = Date(selection)
+                val format = SimpleDateFormat("dd - MM - yyyy", Locale.getDefault())
+                dobEdit.setText(format.format(date))
+            }
+        }
         textSlider.setFactory {
             TextView(requireContext()).apply {
                 textSize = 18f
@@ -42,6 +58,31 @@ class HomeFragment : Fragment() {
                 gravity = Gravity.CENTER
             }
         }
+
+
+        val datePicker = MaterialDatePicker.Builder.datePicker()
+            .setSelection(MaterialDatePicker.todayInUtcMilliseconds()).build()
+        datePicker.show(parentFragmentManager, "dobPicker")
+        datePicker.addOnPositiveButtonClickListener { selection ->
+            val date = Date(selection)
+            val format = SimpleDateFormat("dd - MM - yyyy", Locale.getDefault())
+            currentD.setText(format.format(date))
+
+                messeges = listOf(
+                    "More than just numbers — Agetric celebrates your journey through time.",
+                    "Agetric: Because every age holds a story worth knowing.",
+                    "Your age. Your timeline. Your truth — with Agetric.",
+                    "Track your age. Treasure your growth. Live timelessly.",
+                    "Agetric: Where time meets meaning — one birthday at a time.",
+                    "Not just your age — your legacy, calculated.",
+                    "Time never stops — but Agetric helps you understand it.",
+                    "Growing older is automatic. Knowing how far you've come? That's Agetric.",
+                    "Every second counts. Agetric shows you how much they’ve added up to."
+                )
+
+                nextSlideText()
+            }
+
 
         messeges = listOf(
             "More than just numbers — Agetric celebrates your journey through time.",
