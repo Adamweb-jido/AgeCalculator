@@ -39,6 +39,8 @@ class HomeFragment : Fragment() {
          textSlider = binding.textSlide
         val dobEdit = binding.dobPicker
         val currentD = binding.currentDate
+        val calculationBtn = binding.ageCalBtn
+
 
         val format = SimpleDateFormat("dd - MM - yyyy", Locale.getDefault()).format(Date())
         currentD.setText(format)
@@ -75,6 +77,7 @@ class HomeFragment : Fragment() {
                 )
 
                 nextSlideText()
+                ageCalculationBtn()
             }
 
 
@@ -83,5 +86,9 @@ class HomeFragment : Fragment() {
         textSlider.setText(messeges[messegeIndex])
         messegeIndex = (messegeIndex + 1) % messeges.size
         Handler(Looper.getMainLooper()).postDelayed({nextSlideText()}, 5000)
+    }
+
+    private fun ageCalculationBtn(){
+
     }
 }
