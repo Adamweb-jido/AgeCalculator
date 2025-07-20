@@ -40,6 +40,9 @@ class HomeFragment : Fragment() {
         val dobEdit = binding.dobPicker
         val currentD = binding.currentDate
 
+        val format = SimpleDateFormat("dd - MM - yyyy", Locale.getDefault()).format(Date())
+        currentD.setText(format)
+
         dobEdit.setOnClickListener {
             val datePicker = MaterialDatePicker.Builder.datePicker()
                 .setSelection(MaterialDatePicker.todayInUtcMilliseconds()).build()
@@ -59,15 +62,6 @@ class HomeFragment : Fragment() {
             }
         }
 
-
-        val datePicker = MaterialDatePicker.Builder.datePicker()
-            .setSelection(MaterialDatePicker.todayInUtcMilliseconds()).build()
-        datePicker.show(parentFragmentManager, "dobPicker")
-        datePicker.addOnPositiveButtonClickListener { selection ->
-            val date = Date(selection)
-            val format = SimpleDateFormat("dd - MM - yyyy", Locale.getDefault())
-            currentD.setText(format.format(date))
-
                 messeges = listOf(
                     "More than just numbers — Agetric celebrates your journey through time.",
                     "Agetric: Because every age holds a story worth knowing.",
@@ -84,20 +78,6 @@ class HomeFragment : Fragment() {
             }
 
 
-        messeges = listOf(
-            "More than just numbers — Agetric celebrates your journey through time.",
-            "Agetric: Because every age holds a story worth knowing.",
-            "Your age. Your timeline. Your truth — with Agetric.",
-            "Track your age. Treasure your growth. Live timelessly.",
-            "Agetric: Where time meets meaning — one birthday at a time.",
-            "Not just your age — your legacy, calculated.",
-            "Time never stops — but Agetric helps you understand it.",
-            "Growing older is automatic. Knowing how far you've come? That's Agetric.",
-            "Every second counts. Agetric shows you how much they’ve added up to."
-        )
-
-        nextSlideText()
-    }
 
     private fun nextSlideText() {
         textSlider.setText(messeges[messegeIndex])
